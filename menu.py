@@ -5,9 +5,9 @@ from base_class import Base_class
 
 print("Python basic.")
 
-option=int(input("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.\n5.Exit! "))
+option=int(input("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.\n5.Paralelism.\n6.Exit! "))
 
-while option!=5:
+while option!=6:
     if option==1:
         print('''Printing in 2
         lines''')
@@ -28,7 +28,13 @@ while option!=5:
     elif option==4:
         print("Accesing a private method from a public one!")
         base=Base_class()
-        base.public_method()          
-    option=int(input("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.\n5.Exit! "))
+        base.public_method()
+
+    elif option==5:
+        #id1: int x = 1
+        #id2: int y = 2 
+        print('Developing.')
+
+    option=int(input("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.\5.Paralelism.\n6.Exit! "))
     
 
