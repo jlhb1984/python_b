@@ -2,12 +2,16 @@ from decorator import Decorator
 from args_kwargs import Args_kwargs
 from employee import Employee
 from base_class import Base_class
+from person import Student
 
 print("Python basic.")
 
-option=int(input("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.\n5.Paralelism.\n6.Exit! "))
+print("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.",end="")
+print("\n5.Paralelism.\n6.Super.\n7.Exit!")
 
-while option!=6:
+option=int(input())
+
+while option!=7:
     if option==1:
         print('''Printing in 2
         lines''')
@@ -34,7 +38,13 @@ while option!=6:
         #id1: int x = 1
         #id2: int y = 2 
         print('Developing.')
-
-    option=int(input("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.\5.Paralelism.\n6.Exit! "))
     
+    elif option==6:
+        student=Student("Ana",20,"S123")
+        student.greet()
+
+    print("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.",end="")
+    print("\n5.Paralelism.\n6.Super.\n7.Exit!")
+
+    option=int(input())
 
