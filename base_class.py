@@ -1,4 +1,5 @@
 class Base_class:
+    
     def __init__(self):
         self.protected_variable='Protected'
         self.__private_variable='Private'

@@ -1,8 +1,10 @@
+import pandas as pd
 from decorator import Decorator
 from args_kwargs import Args_kwargs
 from employee import Employee
 from base_class import Base_class
 from person import Student
+from joins import Joins
 
 print("Python basic.")
 
@@ -46,14 +48,29 @@ while option!=8:
     elif option==7:
         print("Developing")
         item_number=int(input("Type number of items "))
-        key=[]
-        values=[]
+        key01=[]
+        key02=[]       
+        values01=[]
+        values02=[]
+        indexes01=[]
+        indexes02=[]        
         for i in range (0,item_number):
-            key.append(input("Type key "))
-            values.append(input("Type value "))            
-        dictionary=({str(key):str(values)})
-        print(dictionary)
+            key01.append(input("Type key "))
+            values01.append(input("Type value "))
+            indexes01.append(key01)            
+        dictionary01=({str(key01):str(values01)})
+        print(dictionary01)
+        for j in range (0,item_number):
+            key02.append(input("Type key "))
+            values02.append(input("Type value "))
+            indexes02.append(key02)            
+        dictionary02=({str(key02):str(values02)})
+        print(dictionary02)
 
+        df01=pd.DataFrame(dictionary01,index=indexes01)
+        df02=pd.DataFrame(dictionary02,index=indexes02)
+        Joins.joins_df(df01,df02)
+        
     print("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.",end="")
     print("\n5.Paralelism.\n6.Super.\n7.Dictionaries.\n8.Exit!")
 
