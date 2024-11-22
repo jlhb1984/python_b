@@ -53,7 +53,8 @@ while option!=8:
         values01=[]
         values02=[]
         indexes01=[]
-        indexes02=[]        
+        indexes02=[]
+              
         for i in range (0,item_number):
             key01.append(input("Type key "))
             values01.append(input("Type value "))
@@ -69,7 +70,7 @@ while option!=8:
 
         df01=pd.DataFrame(dictionary01,index=indexes01)
         df02=pd.DataFrame(dictionary02,index=indexes02)
-        Joins.joins_df(df01,df02)
+        Joins.joins_df(df01,df02)       
         
     print("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.",end="")
     print("\n5.Paralelism.\n6.Super.\n7.Dictionaries.\n8.Exit!")
