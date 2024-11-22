@@ -7,11 +7,11 @@ from person import Student
 print("Python basic.")
 
 print("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.",end="")
-print("\n5.Paralelism.\n6.Super.\n7.Exit!")
+print("\n5.Paralelism.\n6.Super.\n7.Dictionaries.\n8.Exit!")
 
 option=int(input())
 
-while option!=7:
+while option!=8:
     if option==1:
         print('''Printing in 2
         lines''')
@@ -42,9 +42,20 @@ while option!=7:
     elif option==6:
         student=Student("Ana",20,"S123")
         student.greet()
+    
+    elif option==7:
+        print("Developing")
+        item_number=int(input("Type number of items "))
+        key=[]
+        values=[]
+        for i in range (0,item_number):
+            key.append(input("Type key "))
+            values.append(input("Type value "))            
+        dictionary=({str(key):str(values)})
+        print(dictionary)
 
     print("\nMENU: \n1.Print.\n2.Decorators.\n3.Args&Kwarg.\n4.Privated, protected and public.",end="")
-    print("\n5.Paralelism.\n6.Super.\n7.Exit!")
+    print("\n5.Paralelism.\n6.Super.\n7.Dictionaries.\n8.Exit!")
 
     option=int(input())
 
